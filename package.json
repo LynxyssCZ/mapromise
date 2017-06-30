@@ -1,0 +1,32 @@
+{
+  "name": "mapromise",
+  "version": "1.0.0",
+  "description": "Use promise async funtions to map over collection.",
+  "main": "series.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "promise"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LynxyssCZ/mapromise.git"
+  },
+  "author": "LynxyssCZ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LynxyssCZ/mapromise/issues"
+  },
+  "homepage": "https://github.com/LynxyssCZ/mapromise#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.17.1",
+    "mocha": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=6.9.0",
+    "npm": ">=4.0.0"
+  },
+  "dependencies": {}
+}
