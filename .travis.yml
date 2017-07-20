@@ -3,21 +3,10 @@ node_js:
 - '6'
 - '8'
 deploy:
-  # - provider: releases
-  #   api_key:
-  #     secure: LuJ4SnHAtieVfN+Dz71uisDJqiV3/RCFMr9WZszcTuErVIH3RIrwv16RCf8tnWsOWMKcAeGi1UhbwrhAl3EuWiu1DNiyZirmRouYsWkhC71Yc+wqOcxEBdH0WSFU8Uufr57DpGVFlkxqVKxgGtOClFMdMukcry748IuiF3ORcXg/fN23TUb6Ix0pMbh87AzBcrUbY7tu2wub98RfUnl9qF8zm8DGTTx/2Z1gModVXbKdPmPTDyM3o7Ir0Pm+6VPKkbijpefWVK6NNUc0TF8HzQAXye9NvbTs2OP28HkT3cP6KCHcpJTlGYSmoRBf9fhDoL/528FMCWPt5UZYHc/M3RW+A79nDCkCbEOt7JdahDzrzb8p5ecnDqfGdoBefgjAYVRTyktvhjtSOXrtagUNWF1w35Tu0xJJAar+V775urZ77DDMk+YMpckpx5PTS+AIzriRZXVq7klf0tZNmY1bprOfoTyWL/sbRsiaXIa5XcJwG4iho/U7+36oP6SQdO+ZHTcksT9kBLECjoh8TLOqAxPz4WJqLowp1ZUGdsHJJp38XJgZ8Jg0W+LRYZ9OJWsUxl8QYLtDB/lbfIR8y7MLh/aGANmD9KxJfABKE/Pg4wNmCjPLui8BIAySaMUeXFJ3/donyaPSBOY26j1o0W0mXr81zA+e589HsKvAOZ69BCU=
-  #   file_glob: true
-  #   file: dist/*
-  #   skip_cleanup: true
-  #   all_branches: true
-  #   on:
-  #     repo: LynxyssCZ/mapromise
-  #     tags: true
-  #
   - provider: npm
     email: lynxysscz@gmail.com
     api_key:
-      secure: FntIQa64TVsYXRPBaUBc+tRI7aYxOEhrHvXUTIp1/utlaZlduZHHf0L28HhzQtHwOOnl1lJRUh58cHmMxSK02vJEqZzQeuj0l2EJkTPtCTqaK+TuPmOsaY4CEpJzx550KhyHPhMaRIH6xrb2W0AGTmEiDKiTHYPyZckgJjv5ThO6u8FaoCczYyydgv/c1XY/tWa16zalGNQMwgChcRrt1ivSmG9JaphCQj5GkPHod7b6QTMHdJ+nHlfptRkAEkZHdxXLEr3i6e9eFf5PkM82UdjSNq1MaVVCaIrxEMhFHbXtOq5hPjUjEXE1QWufT8PVVMQBT9Xcg/wHmvBkh/KvdMOe6MLAYvIJjnVK6cApw1pcRYg+kJw7li+wTq0gPd9wB20BftoG/DpbHlz382ZR5CbI8o3Ta+FobG9k+QJTZxC7iqXQeE+j2r6ru24myi2gL+ObdiRnYENECNcIPhgE+CXokXE4JKiCWkfFbxFGsuVXx+5lyJF81cQurNa2D7F98t972M6Spfp9nJh4YE80MXm6xoIhnxzWChQDelFYeiZrK+nwhCiwmS5vXUPy/ItQL93BvezrNbpojXRRAVUeD8SLZP1JbXFLI+Z+aoA7/A1bSwdXWXwGX4utAaWUafJmMa22qieqX6LdF+XvN34AJiXDA70OYReZmVpvxboOf/A=
+      secure: "NJaqisxZMkVsbAe/5OZyH9QR1O530IpYokNGE++HSIwlTaAOg1ifUazSIJgarsHf6ZeXOMqaxMxmkTD2J0Pr6XMP7yXl5zUsN47EjKxIZiP5aDRsBsJuLpBEoI3KzZEQCMFu5kwMNfkIDe9H7gUiRfCCFb7ZJtXmJchvGVoYZ0VDsglVLE36EL1ZxPr8fCE+C0/cynU0fN/9SkVJcKUlEtoszXQA2lrNLTVcBsAnZ5XnUpVGx4cmVSaGDlzvIf2xuhWp1IHrUHsVpL1UfV4Jdkk0HOef63Yrr+QTPoOMTGvXRp/xteu89JNv7M1di7sNUw6TyNvCuScX8csP8ijQwKYYULtVe0z+PbfbPB0U+kCGv/UstcJ9E4R0PHFPvrqT1U0AdTqCGRWFX3WHao33noZt100wD1bBvSdbgAtNnKr/VtgNrlcXhRY0LhxYlY0keLfETjFccgVFiiKBoS+JjkE/I5ZuRCkqoE5HRboy+BSvFrWwyfqG+8BVxnRrDPXmok+zAG19gBPm+CK0dNYzxnBxorDt3JahvcxdrSbBGsAWN14dXasl5pIimn5TbD6/O9pKYlcfD+UeCJtedfvOq8Sj/qBS0r5gGG3EumC5vXo94Y0MtM9uNVygF2D//OzY7irZj/NGJlXQ1f8Fndmibg63NjE87ryb27bZgDuVaIY="
     skip_cleanup: true
     on:
       repo: LynxyssCZ/mapromise
