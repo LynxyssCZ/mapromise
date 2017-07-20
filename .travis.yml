@@ -3,19 +3,17 @@ node_js:
 - '6'
 - '8'
 deploy:
-  - provider: releases
-    api_key:
-      secure: LuJ4SnHAtieVfN+Dz71uisDJqiV3/RCFMr9WZszcTuErVIH3RIrwv16RCf8tnWsOWMKcAeGi1UhbwrhAl3EuWiu1DNiyZirmRouYsWkhC71Yc+wqOcxEBdH0WSFU8Uufr57DpGVFlkxqVKxgGtOClFMdMukcry748IuiF3ORcXg/fN23TUb6Ix0pMbh87AzBcrUbY7tu2wub98RfUnl9qF8zm8DGTTx/2Z1gModVXbKdPmPTDyM3o7Ir0Pm+6VPKkbijpefWVK6NNUc0TF8HzQAXye9NvbTs2OP28HkT3cP6KCHcpJTlGYSmoRBf9fhDoL/528FMCWPt5UZYHc/M3RW+A79nDCkCbEOt7JdahDzrzb8p5ecnDqfGdoBefgjAYVRTyktvhjtSOXrtagUNWF1w35Tu0xJJAar+V775urZ77DDMk+YMpckpx5PTS+AIzriRZXVq7klf0tZNmY1bprOfoTyWL/sbRsiaXIa5XcJwG4iho/U7+36oP6SQdO+ZHTcksT9kBLECjoh8TLOqAxPz4WJqLowp1ZUGdsHJJp38XJgZ8Jg0W+LRYZ9OJWsUxl8QYLtDB/lbfIR8y7MLh/aGANmD9KxJfABKE/Pg4wNmCjPLui8BIAySaMUeXFJ3/donyaPSBOY26j1o0W0mXr81zA+e589HsKvAOZ69BCU=
-    file_glob: true
-    file:
-      - series.js
-      - concurrency.js
-    skip_cleanup: true
-    all_branches: true
-    on:
-      repo: LynxyssCZ/mapromise
-      tags: true
-
+  # - provider: releases
+  #   api_key:
+  #     secure: LuJ4SnHAtieVfN+Dz71uisDJqiV3/RCFMr9WZszcTuErVIH3RIrwv16RCf8tnWsOWMKcAeGi1UhbwrhAl3EuWiu1DNiyZirmRouYsWkhC71Yc+wqOcxEBdH0WSFU8Uufr57DpGVFlkxqVKxgGtOClFMdMukcry748IuiF3ORcXg/fN23TUb6Ix0pMbh87AzBcrUbY7tu2wub98RfUnl9qF8zm8DGTTx/2Z1gModVXbKdPmPTDyM3o7Ir0Pm+6VPKkbijpefWVK6NNUc0TF8HzQAXye9NvbTs2OP28HkT3cP6KCHcpJTlGYSmoRBf9fhDoL/528FMCWPt5UZYHc/M3RW+A79nDCkCbEOt7JdahDzrzb8p5ecnDqfGdoBefgjAYVRTyktvhjtSOXrtagUNWF1w35Tu0xJJAar+V775urZ77DDMk+YMpckpx5PTS+AIzriRZXVq7klf0tZNmY1bprOfoTyWL/sbRsiaXIa5XcJwG4iho/U7+36oP6SQdO+ZHTcksT9kBLECjoh8TLOqAxPz4WJqLowp1ZUGdsHJJp38XJgZ8Jg0W+LRYZ9OJWsUxl8QYLtDB/lbfIR8y7MLh/aGANmD9KxJfABKE/Pg4wNmCjPLui8BIAySaMUeXFJ3/donyaPSBOY26j1o0W0mXr81zA+e589HsKvAOZ69BCU=
+  #   file_glob: true
+  #   file: dist/*
+  #   skip_cleanup: true
+  #   all_branches: true
+  #   on:
+  #     repo: LynxyssCZ/mapromise
+  #     tags: true
+  #
   - provider: npm
     email: lynxysscz@gmail.com
     api_key:

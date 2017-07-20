@@ -1,8 +1,8 @@
 const expect = require('chai').expect;
 const Mapromise = require('../series');
 const MapromiseConcurrent = require('../concurrency');
-const BASE = 5;
-const MAX_EXP = 6;
+const BASE = process.env.BASE || 5;
+const MAX_EXP = process.env.MAX_EXP || 6;
 
 describe('Heap explosion', function() {
 	this.timeout(3e5);
