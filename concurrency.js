@@ -29,6 +29,7 @@ function Mapromise(collection, callback, options = {}) {
 			},
 			reject(reason) {
 				this.rejected = true;
+				this.done = true;
 				reject(reason);
 			},
 			accumulator: options.collect === false ? null : [],

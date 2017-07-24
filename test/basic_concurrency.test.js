@@ -1,44 +1,37 @@
 const expect = require('chai').expect;
-const Mapromise = require('../series');
+const Mapromise = require('../concurrency');
 
-
-describe('Basic operations', function() {
+describe('Concurrency', function() {
 	const input = [3,2,4,1,5,6,7,4];
-	let output;
+
 	const identityCallback = (value) => {
 		return new Promise((resolve) => {
 			global.setTimeout(() => {
-				output.push(value);
 				resolve(value);
 			}, value);
 		});
 	};
+
 	const indexSensitiveCallback = (value, index) => {
 		return new Promise((resolve) => {
 			global.setTimeout(() => {
-				output.push(value - index);
 				resolve(value - index);
 			}, value);
 		});
 	};
 
-	beforeEach('clean output', function() {
-		output = [];
-	});
-
 	context('Basic iteration', function() {
-		it('Should be fully sequential', function() {
+		it('results should be sequential', function() {
 			return Mapromise(input, identityCallback)
-				.then(() => {
-					expect(output).eql(input);
+				.then((res) => {
+					expect(res).eql(input);
 				});
 		});
 
-		it('should set correct index', function() {
+		it('should call with a correct index', function() {
 			return Mapromise(input, indexSensitiveCallback)
-				.then(() => Promise.all(input))
-				.then((input) => {
-					expect(output).eql(input.map((value, index) => value - index));
+				.then((res) => {
+					expect(res).eql(input.map((value, index) => value - index));
 				});
 		});
 	});

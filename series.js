@@ -9,7 +9,7 @@
 function Mapromise(collection, callback, options = {}) {
 	return new Promise(function(resolve, reject) {
 		let iterator;
-		const collector = options.collect ? [] : null;
+		const collector = options.collect !== false ? [] : null;
 
 		if (Reflect.has(collection, 'next')) iterator = collection;
 		if (collection[Symbol.iterator]) iterator = collection[Symbol.iterator]();
