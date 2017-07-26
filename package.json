@@ -1,6 +1,6 @@
 {
   "name": "mapromise",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Use promise async funtions to map over collection.",
   "main": "series.js",
   "scripts": {
