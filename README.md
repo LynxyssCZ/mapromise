@@ -25,7 +25,7 @@ Mapromise(Iterable, iterationCallback[, options]).then(results => {
 
 ### Concurrent
 ```javascript
-const Mapromise = require('mapromise/concurrency');
+const Mapromise = require('mapromise');
 
 const iterable = ['first', 'middle', 'last'];
 function iterationCallback(value, index) {
@@ -61,7 +61,18 @@ Mapromise(Iterable, iterationCallback, {concurency: 50}).then(results => {
  - Rejects with the first rejection reason in series.
  On rejection, no subsequent callbacks are invoked
 
+### Modularity
+Mapromise is split into two separate modules.
+One to handle parallel operation and one for fully serial.
+If you prefer including just one in your project, you can do so.
 
+```javascript
+// Handles fully serial iteration
+const MapromiseSeries = require('mapromise/series');
+
+// Can run with specified concurency, but is slightly slower than series for concurency of 1
+const MapromiseConcurency = require('mapromise/concurency');
+```
 
 ## Only arrays?
 Everything that implements iterator interface (has `next` method), or has `Symbol.iterator` method defined.
