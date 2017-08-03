@@ -1,4 +1,4 @@
-# Mapromise
+# Mapromise [![Build Status](https://travis-ci.org/LynxyssCZ/mapromise.svg?branch=master)](https://travis-ci.org/LynxyssCZ/mapromise)
 `Promise.all([].map(() => {})).then(results => {})`, *serial*! (or even __concurent__)
 
 
