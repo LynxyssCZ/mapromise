@@ -16,7 +16,7 @@ function iterationCallback(value, index) {
 	});
 }
 
-Mapromise(Iterable, iterationCallback[, options]).then(results => {
+Mapromise(iterable, iterationCallback).then(results => {
 	console.log(results);
 });
 
@@ -40,7 +40,7 @@ Mapromise(Iterable, iterationCallback, {concurency: 50}).then(results => {
 	console.log(results);
 });
 
-// > [first, middle, last], order not guaranteed
+// > [first, middle, last], order of execution is not guaranteed, but order of results is
 ```
 
 ### In
@@ -50,7 +50,7 @@ Mapromise(Iterable, iterationCallback, {concurency: 50}).then(results => {
  defaults being:
  ```javascript
  {
-	collect: true,
+	collect: true, // Do you want to collect results of each iteration (Array.map behavior)
 	concurrency: 1 // For the concurrent variant
  }
  ```
@@ -61,13 +61,16 @@ Mapromise(Iterable, iterationCallback, {concurency: 50}).then(results => {
  - Rejects with the first rejection reason in series.
  On rejection, no subsequent callbacks are invoked
 
-### Modularity
+### Using specialized modules
 Mapromise is split into two separate modules.
 One to handle parallel operation and one for fully serial.
 If you prefer including just one in your project, you can do so.
 
+Otherwise the default export determines which iteration to choose based on `concurency` option supplied.
+
 ```javascript
-// Handles fully serial iteration
+// Handles only fully serial iteration
+// Optimized for serial payload
 const MapromiseSeries = require('mapromise/series');
 
 // Can run with specified concurency, but is slightly slower than series for concurency of 1
