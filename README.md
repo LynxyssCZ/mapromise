@@ -72,3 +72,10 @@ Promises didn't offer this functionality natively and I don't know if Bluebird d
 
 ## Tests?
 There are some. Though, they are mostly just pure smoke tests and slight torture/heap-explosion ones.
+
+## What is perf.js ?
+`index.js` is the simplest implementation of mapping promises using async/await I came up with, but it has one problem.
+It starts to suck on higher concurrency numbers.
+That is caused by holding promise references and `await Promise.all[]` which sucks up a lot of memory compared to more complex implementation using some kind of defered resolution.
+`perf.js` uses a single defered promise to manage iteration state and is much more memory efficient on higher `concurrency` numbers.
+See [perf-test](./perf-test.js)
