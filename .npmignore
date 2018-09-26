@@ -4,7 +4,7 @@
 .eslintrc
 .npmignore
 .travis.yml
-perf.js
+perf-test.js
 
 coverage
 node_modules
