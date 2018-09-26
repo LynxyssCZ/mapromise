@@ -4,7 +4,9 @@
   "description": "Use promise async funtions to map over collection.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "jest .",
+    "test:ci": "jest . --ci --coverage",
+    "lint": "eslint ."
   },
   "keywords": [
     "promise"
@@ -20,13 +22,11 @@
   },
   "homepage": "https://github.com/LynxyssCZ/mapromise#readme",
   "devDependencies": {
-    "chai": "^4.1.0",
-    "eslint": "^4.3.0",
-    "mocha": "^3.5.0"
+    "eslint": "^5.6.0",
+    "jest": "^23.6.0"
   },
   "engines": {
-    "node": ">=6.9.0",
-    "npm": ">=4.0.0"
-  },
-  "dependencies": {}
+    "node": ">=8.11.4",
+    "npm": ">=6.4.1"
+  }
 }
